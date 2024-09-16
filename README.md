@@ -1,6 +1,6 @@
 # Numerical-Music
 
-### Stereo to mono
+## Stereo to mono
 The function stereo_to_mono converts a stereo signal into a mono signal by averaging the signals across each row.
 
 This function performs the following steps:
@@ -17,7 +17,7 @@ The functions used in this process are mean, which calculates the average of ele
 
 In terms of complexity, the stereo_to_mono function has a complexity of O(n), as the function iterates through each element of the matrix to compute the average and normalize.
 
-### Spectrogram
+## Spectrogram
 The spectrogram function takes the signal, sampling rate, and window size as parameters. It returns three values: the spectrogram matrix, the frequency vector, and the time vector.
 
 The spectrogram matrix is a 2D matrix where each row represents a frequency and each column represents a time. The value at position (i, j) represents the amplitude of frequency i at time j.
@@ -44,7 +44,7 @@ The functions used are hanning, which applies the Hann window function to weight
 
 The complexity of the spectrogram function is O(n * log n) for each segment where n is the window size. Due to the fft function having a complexity of O(n * log n), the overall complexity for all segments is O(m * n * log n), where m is the number of segments.
 
-#### Oscillator
+## Oscillator
 The oscillator function generates a sinusoidal wave modulated by an ADSR (Attack, Decay, Sustain, Release) envelope.
 
 The function parameters include the frequency of the sinusoidal wave, the duration of the sound, the sampling rate, and parameters for each segment of the envelope.
@@ -131,7 +131,7 @@ The functions used are fft, ifft (inverse FFT), max to find the maximum absolute
 
 In terms of complexity, the low_pass function is dominated by FFT and IFFT calculations, which have a complexity of O(n log n), where n is the number of samples in the signal.
 
-### Reverb
+## Reverb
 Reverb is the persistence of sound in a space after the initial sound has been produced.
 
 The apply_reverb function takes the signal and impulse response as parameters. It returns the signal with the impulse response applied.
